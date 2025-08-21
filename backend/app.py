@@ -2,7 +2,7 @@ import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import requests
-import dotenv import load_dotenv
+from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -15,7 +15,7 @@ GROQ_API_URL="https://api.groq.com/openai/v1/chat/completions"
 
 def ask_llama(prompt):
     headers={
-        "authorization": f"Bearer{GROQ_API_KEY}"
+        "authorization": f"Bearer{GROQ_API_KEY}",
         "Content-Type": "application/json"
     }
 
